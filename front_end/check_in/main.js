@@ -1,4 +1,4 @@
-const URL = `https://opulent-space-chainsaw-vxgq9w9pr92x4pp-5000.app.github.dev`
+const URL = `http://localhost:5000`
 
 // misselanium
 const loading_popUp = document.querySelector("#loading-popUp");
@@ -7,7 +7,9 @@ const loading_popUp = document.querySelector("#loading-popUp");
 const body = document.querySelector('body');
 
 img_index = Math.ceil(Math.random() * 12).toString().padStart(2, '0');
-img_src = `https://accounts.ucdb.br/img/background${img_index}.JPG`;
+img_source_index = Math.floor(Math.random() * 2)
+
+img_src = `https://accounts.ucdb.br/img/background${img_index}.${["JPG", "png"][Math.floor(Math.random() * 2)]}`;
 
 body.style.backgroundImage = `url("${img_src}")`;
 
